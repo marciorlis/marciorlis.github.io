@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Projetos GitHub - Márcio Lís</title>
+    <style>
+        :root {
+            --primary: #2d333b;
+            --secondary: #444c56;
+            --accent: #539bf5;
+            --text: #adbac7;
+            --bg: #22272e;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        body {
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 2rem;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--secondary);
+        }
+        
+        h1 {
+            color: #fff;
+            margin-bottom: 0.5rem;
+            font-size: 2.5rem;
+        }
+        
+        .subtitle {
+            color: var(--accent);
+            font-size: 1.1rem;
+        }
+        
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .project-card {
+            background: var(--primary);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--secondary);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            border-color: var(--accent);
+        }
+        
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid var(--secondary);
+        }
+        
+        .project-info {
+            padding: 1.5rem;
+        }
+        
+        .project-title {
+            color: #fff;
+            margin-bottom: 0.8rem;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .project-title svg {
+            width: 24px;
+            fill: var(--accent);
+        }
+        
+        .project-description {
+            margin-bottom: 1.5rem;
+            min-height: 60px;
+        }
+        
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            background: var(--accent);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: opacity 0.3s;
+        }
+        
+        .project-link:hover {
+            opacity: 0.9;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--secondary);
+            color: var(--text);
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            
+            .projects-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Márcio Lís</h1>
+        <p class="subtitle">Meus Projetos no GitHub</p>
+    </header>
+    
+    <main>
+        <div class="projects-container">
+            <!-- Projeto Métrica -->
+            <div class="project-card">
+                <img src="https://raw.githubusercontent.com/marciorlis/metrica/main/.github/screenshot.png" alt="Métrica" class="project-image" onerror="this.src='https://placehold.co/600x400/2d333b/539bf5?text=Métrica'">
+                <div class="project-info">
+                    <h3 class="project-title">
+                        <svg viewBox="0 0 16 16" version="1.1">
+                            <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                        </svg>
+                        Métrica
+                    </h3>
+                    <p class="project-description">
+                        Ferramenta para análise de métricas em hinários cristãos, com suporte a padrões como S.M., C.M., L.M. e variações.
+                    </p>
+                    <a href="https://github.com/marciorlis/metrica" class="project-link" target="_blank" rel="noopener">
+                        Ver no GitHub
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Projeto Midi2Incipit -->
+            <div class="project-card">
+                <img src="https://raw.githubusercontent.com/marciorlis/Midi2Incipit/main/.github/screenshot.png" alt="Midi2Incipit" class="project-image" onerror="this.src='https://placehold.co/600x400/2d333b/539bf5?text=Midi2Incipit'">
+                <div class="project-info">
+                    <h3 class="project-title">
+                        <svg viewBox="0 0 16 16" version="1.1">
+                            <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                        </svg>
+                        Midi2Incipit
+                    </h3>
+                    <p class="project-description">
+                        Conversor de arquivos MIDI para notação musical simplificada (incipit), útil para catalogação de melodias.
+                    </p>
+                    <a href="https://github.com/marciorlis/Midi2Incipit" class="project-link" target="_blank" rel="noopener">
+                        Ver no GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>© 2023 Márcio Lís. Todos os projetos são open-source.</p>
+    </footer>
+</body>
+</html>
